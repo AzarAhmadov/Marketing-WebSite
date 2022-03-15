@@ -53,3 +53,24 @@ close_btn.addEventListener('click', function(){
     list_anim[i].classList.remove('active')
  }
 })
+
+
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 300) {
+    mybutton.style.visibility = "visible";
+    mybutton.style.opacity='1'
+    
+  } else {
+    mybutton.style.visibility = "hidden";
+    mybutton.style.opacity='0'
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

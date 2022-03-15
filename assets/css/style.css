@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -590,6 +591,7 @@ footer .footer-container {
     justify-content: center;
 }
 
+
 .sosial-grid div:first-child{
     border-right: 1px solid rgba(255, 255, 255, 0.623);
 }
@@ -604,6 +606,24 @@ footer .footer-container {
     transition: 1000ms all;
 }
 
+#myBtn {
+    visibility: hidden;
+    position: fixed;
+    bottom: 40px;
+    border-radius: 50%;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    outline: none;
+    background-color: #7c43c2;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    opacity: 0;
+    transition: 400ms all;
+  }
 
 .mobil-menu ul li.active{
     transform: scale(1);
