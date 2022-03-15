@@ -34,3 +34,22 @@ window.addEventListener('scroll', () => {
     header.classList.remove('active')
   }
 })
+
+const menu = document.querySelector('.menu');
+const mobil_menu = document.querySelector('.mobil-menu');
+const close_btn = document.querySelector('.close-btn');
+const list_anim = document.querySelectorAll('.list_anim')
+
+menu.addEventListener('click', function(){
+  mobil_menu.classList.add('active')
+  for(let i = 0; i<list_anim.length; i++){
+     list_anim[i].classList.add('active')
+  }
+})
+
+close_btn.addEventListener('click', function(){
+  mobil_menu.classList.remove('active')
+  for(let i = 0; i<list_anim.length; i++){
+    list_anim[i].classList.remove('active')
+ }
+})

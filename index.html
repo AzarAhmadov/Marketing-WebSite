@@ -8,6 +8,7 @@
     <title> Websaytt </title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="./assets/image/programming.png" type="img/png">
 </head>
 
@@ -20,6 +21,15 @@
                     <a href="#" class="logo"> Websaytsifarişi </a>
                 </div>
                 <div class="h-right">
+                    <div class="menu">
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="23"
+                            height="23">
+                            <rect y="11" width="24" height="2" rx="1" />
+                            <rect y="4" width="24" height="2" rx="1" />
+                            <rect y="18" width="24" height="2" rx="1" /></svg>
+
+                    </div>
                     <nav>
                         <ul>
                             <li><a href="#"> Ana səhifə </a></li>
@@ -36,203 +46,223 @@
     <!-- Main start -->
     <main>
 
-    <!-- Bg image start -->
-    <div class="bg-images">
-        <img src="./assets/image/Background.png" alt="">
-    </div>
-    <!-- Bg image end -->
-
-    <!-- Banner start -->
-    <section id="banner">
-        <div class="container">
-            <div class="row">
-                <div class="b-left">
-                    <h1>
-                        Websayt hazırlanması <br> <span> xidməti </span><span>...</span>
-                    </h1>
-                    <p>İstənilən portfolio,marketing,biznes və s Web saytların qurulması və
-                        istəyə baglı olaraq həm dizayn təklif edilməsi həm də sizin istədiyiniz dizaynda saytın
-                        yıgılması xidmətləri gosterilir.
-                        bizim esas sahemiz Front end uzerinedir...</p>
-                    <button class="contact-btn">
-                        Əlaqə
-                    </button>
+        <div class="mobil-menu">
+            <ul>
+                <li class="list_anim" ><a class="active" href="#"> Ana Səhifə </a></li>
+                <li class="list_anim" ><a href="#"> Xidmətlər </a></li>
+                <li class="list_anim" ><a href="#"> Portfolio </a></li>
+            </ul>
+            <div class="close-btn">
+                <i style="font-size: 30px; color:#fff" class="fa-regular fa-x"></i>
+            </div>
+            <div class="sosial-grid">
+                <div>
+                  <i style="font-size: 50px; color:#fff" class="fa-brands fa-whatsapp"></i>
                 </div>
-                <div class="b-right">
-                    <img src="./assets/image/Illustration.png" alt="">
+                <div>
+                  <i style="font-size: 50px; color:#fff" class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+        </div>
+
+        <!-- Bg image start -->
+        <div class="bg-images">
+            <img src="./assets/image/Background.png" alt="">
+        </div>
+        <!-- Bg image end -->
+
+        <!-- Banner start -->
+        <section id="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="b-left">
+                        <h1>
+                            Websayt hazırlanması <br> <span> xidməti </span><span>...</span>
+                        </h1>
+                        <p>İstənilən portfolio,marketing,biznes və s Web saytların qurulması və
+                            istəyə baglı olaraq həm dizayn təklif edilməsi həm də sizin istədiyiniz dizaynda saytın
+                            yıgılması xidmətləri gosterilir.
+                            bizim esas sahemiz Front end uzerinedir...</p>
+                        <button class="contact-btn">
+                            Əlaqə
+                        </button>
+                    </div>
+                    <div class="b-right">
+                        <img src="./assets/image/Illustration.png" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Banner end -->
+        </section>
+        <!-- Banner end -->
 
-    <!-- Services start -->
-    <section id="services">
-        <div class="container">
-            <h2 class="global-top">
-                Xidmətlər
-            </h2>
-            <div class="row">
-                <div class="s-item">
-                    <img class="il-img" src="./assets/image/Web development 1.png">
-                    <div class="s-text">
-                        <h4 class="s-top">
-                            Domen
-                        </h4>
-                        <img src="./assets/image/Rectangle 4.png" alt="">
-                        <p>
-                            1 illik pulsuz domen verilir
-                            (cf) - uzantılı
-                            Saytlarımız mobil uyumlu şəkildədir
-                        </p>
+        <!-- Services start -->
+        <section id="services">
+            <div class="container">
+                <h2 class="global-top">
+                    Xidmətlər
+                </h2>
+                <div class="row">
+                    <div class="s-item">
+                        <img class="il-img" src="./assets/image/Web development 1.png">
+                        <div class="s-text">
+                            <h4 class="s-top">
+                                Domen
+                            </h4>
+                            <img src="./assets/image/Rectangle 4.png" alt="">
+                            <p>
+                                1 illik pulsuz domen verilir
+                                (cf) - uzantılı
+                                Saytlarımız mobil uyumlu şəkildədir.
+                            </p>
+
+                            <div class="s-number">
+                                <span>01</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-item">
+                        <img class="il-img" src="./assets/image/Settings 1.png">
+                        <div class="s-text">
+                            <h4 class="s-top">
+                                Texniki dəstək
+                            </h4>
+                            <img src="./assets/image/Rectangle 4.png" alt="">
+                            <p>
+                                Limitsiz texniki dəstək verilir hər hansı bir problem yaranarsa dərhal düzəldilir.
+                            </p>
+                        </div>
+
+                        <div class="s-num">
+                            <span>02</span>
+                        </div>
+                    </div>
+                    <div class="s-item">
+                        <img class="il-img" src="./assets/image/Success 1.png">
+                        <div class="s-text">
+                            <h4 class="s-top">
+                                Reyting
+                            </h4>
+                            <img src="./assets/image/Rectangle 4.png" alt="">
+                            <p>
+                                Gun ərzində neçə istifadəçinin girdiyini bilmək, Online chat sisteminin qurulması və s
+                                kimi
+                                müxtəlif funksiyalar hazırlanır.
+                            </p>
+                        </div>
 
                         <div class="s-number">
-                            <span>01</span>
+                            <span>03</span>
                         </div>
                     </div>
                 </div>
-                <div class="s-item">
-                    <img class="il-img" src="./assets/image/Settings 1.png">
-                    <div class="s-text">
-                        <h4 class="s-top">
-                            Texniki dəstək
+            </div>
+        </section>
+        <!-- Services end -->
+
+        <!-- Banner satart -->
+        <section id="Banner">
+            <div class="container">
+                <div class="row">
+                    <div class="banner-txt">
+                        <p> Keyfiyyət axtarırsınızsa
+                            dogru ünvandasınız 😎 </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner end -->
+
+        <!-- Portfolio start -->
+        <section id="portfolio">
+            <div class="port-container">
+                <h2 class="global-top">
+                    Portfolio
+                </h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-item">
+                                <img src="./assets/image/port1.png" alt="">
+                                <span> SEE SAW </span>
+
+                                <div class="kc">
+                                    <a href="#">
+                                        Sayta keçid
+                                    </a>
+                                </div>
+                                <div class="hv"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-item">
+                                <img src="./assets/image/port2.png" alt="">
+                                <span> MAKONU </span>
+                                <div class="kc">
+                                    <a href="#">
+                                        Sayta keçid
+                                    </a>
+                                </div>
+                                <div class="hv"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-item">
+                                <img src="./assets/image/port3.png" alt="">
+                                <span> NTK KURUMSAL </span>
+                                <div class="kc">
+                                    <a href="#">
+                                        Sayta keçid
+                                    </a>
+                                </div>
+                                <div class="hv"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-item">
+                                <img src="./assets/image/port4.png" alt="">
+                                <span> TEXH </span>
+                                <div class="kc">
+                                    <a href="#">
+                                        Sayta keçid
+                                    </a>
+                                </div>
+                                <div class="hv"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Portfolio end -->
+
+        <!-- Why me start -->
+        <section id="why">
+            <div class="container">
+                <div class="row">
+                    <div class="w-left">
+                        <h4 class="why-top">
+                            Nəyə görə biz ?
                         </h4>
-                        <img src="./assets/image/Rectangle 4.png" alt="">
                         <p>
-                            Limitsiz texniki dəstək verilir hər hansı bir problem saytda yaranarsa dərhal düzəldilir
+                            Ən müasir texnologiyalardan istifadə edilir və istənilən dizayna malik saytar hazırlanır,
+                            Şirkətlərdən fərqli olaraq cox ucuz qiymətlərə web sayt hazırlayırıq.
                         </p>
+                        <button class="contact-btn">
+                            Əlaqə
+                        </button>
                     </div>
-
-                    <div class="s-num">
-                        <span>02</span>
-                    </div>
-                </div>
-                <div class="s-item">
-                    <img class="il-img" src="./assets/image/Success 1.png">
-                    <div class="s-text">
-                        <h4 class="s-top">
-                            Reyting
-                        </h4>
-                        <img src="./assets/image/Rectangle 4.png" alt="">
-                        <p>
-                            Gun ərzində neçə istifadəçinin girdiyini bilmək, Online chat sisteminin qurulması vs kimi
-                            muxtelif funksiyalar hazırlanır
-                        </p>
-                    </div>
-
-                    <div class="s-number">
-                        <span>03</span>
+                    <div class="w-right">
+                        <img src="./assets/image/Frame 3.png" alt="">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Services end -->
+        </section>
+        <!-- Why me end -->
 
-    <!-- Banner satart -->
-    <section id="Banner">
-        <div class="container">
-            <div class="row">
-                <div class="banner-txt">
-                    <p> Keyfiyyət axtarırsınızsa
-                        dogru ünvandasınız 😎 </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Banner end -->
-
-    <!-- Portfolio start -->
-    <section id="portfolio">
-        <div class="port-container">
-            <h2 class="global-top">
-                Portfolio
-            </h2>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="swiper-item">
-                            <img src="./assets/image/port1.png" alt="">
-                            <span> SEE SAW </span>
-
-                            <div class="kc">
-                                <a href="#">
-                                    Sayta keçid
-                                </a>
-                            </div>
-                            <div class="hv"></div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-item">
-                            <img src="./assets/image/port2.png" alt="">
-                            <span> MAKONU </span>
-                            <div class="kc">
-                                <a href="#">
-                                    Sayta keçid
-                                </a>
-                            </div>
-                            <div class="hv"></div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-item">
-                            <img src="./assets/image/port3.png" alt="">
-                            <span> NTK KURUMSAL </span>
-                            <div class="kc">
-                                <a href="#">
-                                    Sayta keçid
-                                </a>
-                            </div>
-                            <div class="hv"></div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-item">
-                            <img src="./assets/image/port4.png" alt="">
-                            <span> TEXH </span>
-                            <div class="kc">
-                                <a href="#">
-                                    Sayta keçid
-                                </a>
-                            </div>
-                            <div class="hv"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <!-- Portfolio end -->
-
-    <!-- Why me start -->
-    <section id="why">
-        <div class="container">
-            <div class="row">
-                <div class="w-left">
-                    <h4 class="why-top">
-                        Nəyə görə biz ?
-                    </h4>
-                    <p>
-                        Ən müasir texnologiyalardan istifadə edilir və istənilən dizayna malik saytar hazırlanır,
-                        Şirkətlərdən fərqli olaraq cox ucuz qiymətlərə web sayt hazırlayırıq.
-                    </p>
-                    <button class="contact-btn">
-                        Əlaqə
-                    </button>
-                </div>
-                <div class="w-right">
-                    <img src="./assets/image/Frame 3.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Why me end -->
-
-</main>
- <!-- Main end -->
+    </main>
+    <!-- Main end -->
 
     <!-- Footer start -->
     <footer>
