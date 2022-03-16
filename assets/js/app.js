@@ -40,33 +40,35 @@ const mobil_menu = document.querySelector('.mobil-menu');
 const close_btn = document.querySelector('.close-btn');
 const list_anim = document.querySelectorAll('.list_anim')
 
-menu.addEventListener('click', function(){
+menu.addEventListener('click', function () {
   mobil_menu.classList.add('active')
-  for(let i = 0; i<list_anim.length; i++){
-     list_anim[i].classList.add('active')
+  for (let i = 0; i < list_anim.length; i++) {
+    list_anim[i].classList.add('active')
   }
 })
 
-close_btn.addEventListener('click', function(){
+close_btn.addEventListener('click', function () {
   mobil_menu.classList.remove('active')
-  for(let i = 0; i<list_anim.length; i++){
+  for (let i = 0; i < list_anim.length; i++) {
     list_anim[i].classList.remove('active')
- }
+  }
 })
 
 
 var mybutton = document.getElementById("myBtn");
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction()
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 300) {
     mybutton.style.visibility = "visible";
-    mybutton.style.opacity='1'
-    
+    mybutton.style.opacity = '1'
+
   } else {
     mybutton.style.visibility = "hidden";
-    mybutton.style.opacity='0'
+    mybutton.style.opacity = '0'
   }
 }
 
@@ -74,3 +76,73 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+ScrollReveal({
+  reset: true
+});
+
+ScrollReveal().reveal(".b-left,.w-right", {
+  duration: 2000,
+  origin: "left",
+  distance: "400px",
+  easing: "ease-in-out"
+});
+
+ScrollReveal().reveal(".global-top ,.why-top", {
+  duration: 2000,
+  origin: "top",
+  distance: "400px",
+  easing: "cubic-bezier(0.5, 0, 0, 1)",
+  rotate: {
+    x: 20,
+    z: -10
+  }
+});
+
+ScrollReveal().reveal("#Banner", {
+  duration: 3000,
+  move: 0,
+  rotate: {
+    x: 20,
+    z: -10
+  }
+});
+
+
+ScrollReveal().reveal(".bg-images, .b-right,.w-left", {
+  duration: 4000,
+  scale: 0.85
+});
+
+ScrollReveal().reveal(".s-item", {
+  duration: 2000,
+  origin: "bottom",
+  distance: "100px",
+  easing: "cubic-bezier(.37,.01,.74,1)",
+  opacity: 0.3,
+  scale: 0.5
+});
+
+ScrollReveal().reveal("#portfolio", {
+  duration: 5000,
+  move: 0
+});
+
+
+ScrollReveal().reveal(".footer-item", {
+  duration: 3000,
+  origin: "left",
+  distance: "200px",
+  easing: "cubic-bezier(0.5, 0, 0, 1)",
+  rotate: {
+    x: 20,
+    z: -10
+  }
+});
+
+const scrool_top = document.querySelector(".scrool-top");
+let body = document.querySelector('body')
+const scrool_value_top = body.getBoundingClientRect().top;
+
+window.addEventListener('scrool',scrool_value_top  )
+console.log(scrool_value_top)
