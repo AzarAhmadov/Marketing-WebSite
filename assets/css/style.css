@@ -178,8 +178,9 @@ p {
     border: none;
     transition: 400ms all;
     color: var(--colo-white);
-    cursor: pointer;
+    cursor: pointer !important;
     position: relative;
+z-index: 10;
 }
 
 #portfolio .global-top {

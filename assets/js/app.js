@@ -91,7 +91,7 @@ ScrollReveal().reveal(".b-left,.w-right", {
 ScrollReveal().reveal(".global-top ,.why-top", {
   duration: 2000,
   origin: "top",
-  distance: "400px",
+  distance: "200px",
   easing: "cubic-bezier(0.5, 0, 0, 1)",
   rotate: {
     x: 20,
@@ -109,7 +109,7 @@ ScrollReveal().reveal("#Banner", {
 });
 
 
-ScrollReveal().reveal(".bg-images, .b-right,.w-left", {
+ScrollReveal().reveal(".bg-images, .b-right", {
   duration: 4000,
   scale: 0.85
 });
@@ -144,5 +144,5 @@ const scrool_top = document.querySelector(".scrool-top");
 let body = document.querySelector('body')
 const scrool_value_top = body.getBoundingClientRect().top;
 
-window.addEventListener('scrool',scrool_value_top  )
+window.addEventListener('scrool', scrool_value_top)
 console.log(scrool_value_top)
