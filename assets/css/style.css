@@ -12,22 +12,27 @@
     scroll-behavior: smooth;
 }
 
-.scrool-top{
-    position: absolute;
-    top: 0;
-    width: 0%;
-    height: 2px;
-    background: red;
-}
 :root {
     --colo-white: #fff;
     --color-black: #000;
     --color-purple: #7C14FD;
 }
 
+
 html,
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+.scrool-top{
+    position: fixed;
+    top: 0;
+    width: 0%;
+    z-index: 2000;
+    height: 2px;
+    border-radius: 0 100px;
+    background-color: #6617cb;
+    background-image: linear-gradient(315deg, #6617cb 0%, #cb218e 74%);
 }
 
 h1,
@@ -59,19 +64,17 @@ p {
     display: flex;
     align-items: center;
     box-shadow: 0px 12px 22px rgba(0, 0, 0, 0.05);
+    position: relative;
 }
 
-.header.active {
+#header.active {
     position: fixed;
-    top: 0;
     left: 0;
     right: 0;
+    transition: 600ms all !important;
     z-index: 1000;
 }
 
-.header {
-    transition: 600ms all;
-}
 
 #header .container {
     width: 70%;
@@ -414,11 +417,16 @@ z-index: 10;
     height: 300px;
 }
 
+.swiper-item .rem{
+width: 590px;
+}
+
 .swiper-item {
+    overflow-x: hidden;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 500px;
-    height: 360px;
+    height: 350px;
     border: 1px solid rgba(0, 0, 0, 0.212);
     display: flex;
     flex-direction: column;
@@ -426,13 +434,12 @@ z-index: 10;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     cursor: pointer;
-    position: relative;
 }
 
 .swiper-item:hover .kc {
     visibility: visible;
     opacity: 1;
-    top: 50%;
+    top: 55%;
 }
 
 .swiper-item:hover .hv {
@@ -445,7 +452,7 @@ z-index: 10;
     top: 0;
     border-radius: 10px;
     width: 100%;
-    height: 100%;
+    height: 108%;
     background: rgba(0, 0, 0, 0.6008);
     visibility: hidden;
     opacity: 0;
@@ -471,6 +478,21 @@ z-index: 10;
     transition: 400ms all;
 }
 
+.site_name{
+    left: 50%;
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#fff;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+    border-radius: 10px;
+    position: absolute;
+    bottom: -30px;
+    transform: translateX(-50%);
+}
+
 .kc a {
     color: #fff !important;
 }
@@ -487,9 +509,12 @@ z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 17px;
+    width:auto;
     font-size: 20px;
     font-family: 'Fredoka', sans-serif;
+    padding: 5px 25px;
+    border-radius: 50px;
+    text-transform: uppercase;
 }
 
 a {
@@ -497,7 +522,7 @@ a {
 }
 
 .mySwiper {
-    padding-bottom: 80px !important;
+    padding-bottom: 90px !important;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -697,6 +722,9 @@ main {
 }
 
 @media only screen and (max-width:992px) {
+    .swiper-item .rem{
+        width: 450px;
+    }
     #why .row {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -728,6 +756,9 @@ main {
         width: 90%;
         margin: 0 auto;
         padding-bottom: 30px;
+    }
+    .b-left{
+        margin-left: 0;
     }
 
     .b-right img {
@@ -795,6 +826,9 @@ main {
 }
 
 @media only screen and (max-width:680px) {
+    .swiper-item .rem{
+        width: 480px;
+    }
     .s-item {
         padding-bottom: 45px;
     }
@@ -825,7 +859,10 @@ main {
     }
 
     .b-left p {
+        width: 100%;
+        padding: 0 10px 30px;
         font-size: 15px;
+        text-align: center;
     }
 
     .contact-btn {
@@ -888,7 +925,7 @@ main {
     footer {
         margin-top: -200px !important;
     }
-
+    
     .footer-row {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -900,6 +937,8 @@ main {
     .footer-row {
         background: rgb(245, 242, 237);
         padding: 25px 0;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
         transform: translateY(300px);
     }
 
@@ -907,9 +946,11 @@ main {
         margin-top: 60px;
         margin-bottom: 30px;
     }
-
+    .hv{
+        height: 111%;
+    }
     .mySwiper {
-        padding-bottom: 50px !important;
+        padding-bottom: 80px !important;
     }
 
     .footer-item {
@@ -941,16 +982,20 @@ main {
     }
 
     .swiper-item {
-        height: 325px;
-    }
-
-    .swiper-item span {
-        border: 1px solid rgba(0, 0, 0, 0.11);
-        padding: 5px 20px;
-        border-radius: 50px;
+        height: 290px;
     }
 
     .swiper-item img:nth-child(2) {
         height: 0;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .w-left p {
+        width: 81%;
+    }
+
+    .b-left p {
+        width: 90%
     }
 }

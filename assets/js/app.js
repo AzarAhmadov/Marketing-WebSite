@@ -3,6 +3,7 @@ var swiper = new Swiper(".mySwiper", {
   spaceBetween: 0,
   pagination: {
     el: ".swiper-pagination",
+    dynamicBullets: true,
     clickable: true,
   },
   breakpoints: {
@@ -11,7 +12,7 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 20,
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 40,
     },
     1024: {
@@ -35,6 +36,15 @@ window.addEventListener('scroll', () => {
   }
 })
 
+const listMobil = document.querySelectorAll('.nav-anim');
+
+listMobil.forEach((item) => {
+  item.addEventListener("click", () => {
+    document.querySelector(".nav-anim.active").classList.remove("active");
+    item.classList.add("active");
+  });
+});
+
 const menu = document.querySelector('.menu');
 const mobil_menu = document.querySelector('.mobil-menu');
 const close_btn = document.querySelector('.close-btn');
@@ -44,6 +54,9 @@ menu.addEventListener('click', function () {
   mobil_menu.classList.add('active')
   for (let i = 0; i < list_anim.length; i++) {
     list_anim[i].classList.add('active')
+    listMobil[i].addEventListener('click',function(){
+  mobil_menu.classList.remove('active')
+    })
   }
 })
 
@@ -142,7 +155,17 @@ ScrollReveal().reveal(".footer-item", {
 
 const scrool_top = document.querySelector(".scrool-top");
 let body = document.querySelector('body')
-const scrool_value_top = body.getBoundingClientRect().top;
 
-window.addEventListener('scrool', scrool_value_top)
-console.log(scrool_value_top)
+const animateBar = () => {
+  let ScroolDistance = -body.getBoundingClientRect().top;
+  let progresWith = 
+  (ScroolDistance / (body.getBoundingClientRect().height - document.documentElement.clientHeight)) * 100;
+  let value = Math.floor(progresWith)
+  scrool_top.style.width = value + '%';
+
+  if(value < 0) {
+    scrool_top.style.width = '0%'
+  }
+}
+
+window.addEventListener('scroll', animateBar)
