@@ -87,7 +87,14 @@ p {
 }
 
 #header .h-left .logo {
-    font-size: 27px;
+    font-size: 28px;
+    color:var(--color-black);
+    background-color: #a4508b;
+    -webkit-background-clip: text;
+    background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #6617cb;
+  background-image: linear-gradient(315deg, #6617cb 0%, #cb218e 74%);
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -169,6 +176,10 @@ p {
     white-space: normal;
 }
 
+.contact-btn a {
+    color:#FFF;
+}
+
 .contact-btn {
     width: 159px;
     height: 57px;
@@ -180,7 +191,6 @@ p {
     line-height: 29px;
     border: none;
     transition: 400ms all;
-    color: var(--colo-white);
     cursor: pointer !important;
     position: relative;
 z-index: 10;
@@ -191,11 +201,15 @@ z-index: 10;
     margin-bottom: 60px;
 }
 
+.contact-btn:hover a{
+    color:var(--color-purple);
+}
 
 .contact-btn:hover {
     background: none;
     border: 1px solid var(--color-purple);
-    color: var(--color-black);
+    color:var(--color-purple);
+    border-radius: 300px;
 }
 
 #banner .container .row {
@@ -517,9 +531,6 @@ width: 590px;
     text-transform: uppercase;
 }
 
-a {
-    color: inherit !important;
-}
 
 .mySwiper {
     padding-bottom: 90px !important;
@@ -578,6 +589,9 @@ footer .footer-container {
     align-items: center;
 }
 
+.footer-row .footer-item ul li a{
+    color:var(--color-black);
+}
 .footer-row .footer-item ul span {
     font-size: 20px;
 }
