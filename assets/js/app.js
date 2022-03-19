@@ -1,3 +1,9 @@
+const animateLoad = document.querySelector('.animate-loading');
+animateLoad.classList.add('active')
+setTimeout(function(){
+animateLoad.classList.remove('active')
+},3500)
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   spaceBetween: 0,
@@ -91,18 +97,18 @@ function topFunction() {
 }
 
 ScrollReveal({
-  reset: true
+  reset: false
 });
 
 ScrollReveal().reveal(".b-left,.w-right", {
-  duration: 2000,
+  duration: 5500,
   origin: "left",
   distance: "400px",
   easing: "ease-in-out"
 });
 
 ScrollReveal().reveal(".global-top ,.why-top", {
-  duration: 2000,
+  duration: 1500,
   origin: "top",
   distance: "200px",
   easing: "cubic-bezier(0.5, 0, 0, 1)",
@@ -113,7 +119,7 @@ ScrollReveal().reveal(".global-top ,.why-top", {
 });
 
 ScrollReveal().reveal("#Banner", {
-  duration: 3000,
+  duration: 2500,
   move: 0,
   rotate: {
     x: 20,
@@ -123,12 +129,12 @@ ScrollReveal().reveal("#Banner", {
 
 
 ScrollReveal().reveal(".bg-images, .b-right", {
-  duration: 4000,
-  scale: 0.85
+  duration: 9000,
+  scale: 0.15
 });
 
 ScrollReveal().reveal(".s-item", {
-  duration: 2000,
+  duration: 1500,
   origin: "bottom",
   distance: "100px",
   easing: "cubic-bezier(.37,.01,.74,1)",
@@ -137,7 +143,7 @@ ScrollReveal().reveal(".s-item", {
 });
 
 ScrollReveal().reveal("#portfolio", {
-  duration: 5000,
+  duration: 4500,
   move: 0
 });
 
