@@ -598,7 +598,7 @@ footer .footer-container {
 }
 
 .footer-row .footer-item ul p {
-    font-size: 17px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -630,28 +630,6 @@ footer .footer-container {
     left: 0;
 }
 
-.sosial-grid {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-}
-
-.sosial-grid div {
-    border-top: 1px solid rgba(255, 255, 255, 0.623);
-    display: flex;
-    padding: 30px 0;
-    width: 100%;
-    justify-content: center;
-}
-
-
-.sosial-grid div:first-child {
-    border-right: 1px solid rgba(255, 255, 255, 0.623);
-}
-
 .close-btn {
     position: absolute;
     top: 25px;
@@ -673,7 +651,7 @@ main {
     position: fixed;
     bottom: 20px;
     border-radius: 50%;
-    right: 20px;
+     left: 20px;
     z-index: 99;
     font-size: 18px;
     outline: none;
