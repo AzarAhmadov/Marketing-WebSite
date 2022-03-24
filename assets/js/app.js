@@ -100,8 +100,15 @@ ScrollReveal({
   reset: false
 });
 
-ScrollReveal().reveal(".b-left,.w-right", {
-  duration: 5500,
+ScrollReveal().reveal(".b-left", {
+  duration: 5000,
+  origin: "left",
+  distance: "400px",
+  easing: "ease-in-out"
+});
+
+ScrollReveal().reveal(".w-right", {
+  duration: 2500,
   origin: "left",
   distance: "400px",
   easing: "ease-in-out"

@@ -644,12 +644,12 @@ footer .footer-container {
     background-color: #7c43c2;
     width: 100%;
     height: 100vh;
-    left: -100%;
+    top: -100%;
     transition: 400ms all;
 }
 
 .mobil-menu.active {
-    left: 0;
+    top: 0;
 }
 
 .close-btn {
@@ -660,7 +660,7 @@ footer .footer-container {
 
 .mobil-menu ul li {
     margin-bottom: 30px;
-    transform: scale(2);
+    transform: translateX(-200px);
     transition: 1000ms all;
 }
 
