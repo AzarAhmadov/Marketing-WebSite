@@ -4,6 +4,24 @@ setTimeout(function(){
 animateLoad.classList.remove('active')
 },3500)
 
+
+const scrool_top = document.querySelector(".scrool-top");
+let body = document.querySelector('body')
+
+const animateBar = () => {
+  let ScroolDistance = -body.getBoundingClientRect().top;
+  let progresWith = 
+  (ScroolDistance / (body.getBoundingClientRect().height - document.documentElement.clientHeight)) * 100;
+  let value = Math.floor(progresWith)
+  scrool_top.style.width = value + '%';
+
+  if(value < 0) {
+    scrool_top.style.width = '0%'
+  }
+}
+
+window.addEventListener('scroll', animateBar)
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   spaceBetween: 0,
@@ -165,20 +183,3 @@ ScrollReveal().reveal(".footer-item", {
     z: -10
   }
 });
-
-const scrool_top = document.querySelector(".scrool-top");
-let body = document.querySelector('body')
-
-const animateBar = () => {
-  let ScroolDistance = -body.getBoundingClientRect().top;
-  let progresWith = 
-  (ScroolDistance / (body.getBoundingClientRect().height - document.documentElement.clientHeight)) * 100;
-  let value = Math.floor(progresWith)
-  scrool_top.style.width = value + '%';
-
-  if(value < 0) {
-    scrool_top.style.width = '0%'
-  }
-}
-
-window.addEventListener('scroll', animateBar)
